@@ -1,0 +1,170 @@
+/* Barra de Navegacion */
+.navbar {
+    background-color: rgb(247, 126, 39);
+}
+
+.navbar-brand img:hover {
+    transition: 1s ease-in-out;
+    border-radius: 26px;
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* General Secciones */
+section {
+    padding-top: 74px;
+}
+
+/* Seccion Portada */
+.portada {
+    min-height: 100vh;
+    background-image: url(./img/pattern-randomized.svg);
+}
+
+.logo-portada {
+    max-width: 200px;
+    border: 1px solid black;
+    border-radius: 12px;
+    margin: 0 8px;
+}
+
+.imagen-portada {
+    max-width: 450px;
+    padding-top: 40px;
+}
+
+/* Seccion Cartelera */
+.cartelera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(115deg,
+            rgba(84, 84, 223, 0.1),
+            rgb(255, 255, 255)), url(./img/fondo-cine.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: whitesmoke;
+    text-shadow: 2px 2px black;
+}
+
+.dia {
+    padding-bottom: 32px;
+}
+
+.peliculas {
+    display: flex;
+    justify-content: space-between;
+    gap: 42px;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.card-peli {
+    overflow: hidden;
+    border: rgb(247, 126, 39) solid 1px;
+    border-radius: 12px;
+    background: #000;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.card-peli:hover {
+    box-shadow: rgb(255, 255, 255) 0px 3px 12px 6px;
+    cursor: pointer;
+}
+
+.card-imagen {
+    max-height: 380px;
+}
+
+/* Ubicacion */
+.ubicacion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ubicacion iframe {
+    height: 325px;
+    width: 90%;
+    padding-bottom: 74px;
+}
+
+/* Estilos Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 32px;
+    padding: 32px 0;
+    background-color: #343231;
+}
+
+.links-redes {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    font-size: x-large;
+}
+
+.link {
+    text-decoration: none;
+}
+
+/* Pagina Detalle */
+.detalle {
+    margin-top: 64px;
+    background-image: linear-gradient(180deg,
+            rgba(227, 227, 235, 0),
+            rgba(56, 56, 143, 0.9)),
+        url(./img/fondo-detalle.webp);
+    background-position: center;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+.trailer {
+    background-color:#103231;
+    color: whitesmoke;
+    font-size: 1.25rem;}
+
+.trailer,
+.detalle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 74px;
+}
+
+/* Responsive */
+@media screen and (max-width: 767px) {
+    .navbar-brand {
+        display: none;
+    }
+
+    .peliculas {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .detalle, .trailer {
+        flex-wrap: wrap;
+    }
+
+    .links-redes {
+        flex-direction: column;
+        row-gap: 4px;
+        font-size: large;
+    }
+}
