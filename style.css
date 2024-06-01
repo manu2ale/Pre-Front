@@ -4,7 +4,7 @@
 }
 
 .navbar-brand img:hover {
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
     border-radius: 26px;
 }
 
@@ -17,13 +17,32 @@
     text-decoration: underline;
 }
 
+#login-api-button {
+    border: 1px white solid;
+    border-radius: 12px;
+}
+
+#login-api-button:hover {
+    background-color: rgb(255, 149, 74);
+}
+
 /* General Secciones */
 section {
     padding-top: 74px;
 }
 
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login form {
+    max-width: 380px;
+}
+
 /* Seccion Portada */
-.portada {
+.portada, .login, .conexionAPI {
     min-height: 100vh;
     background-image: url(./img/pattern-randomized.svg);
 }
