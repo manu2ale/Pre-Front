@@ -3,14 +3,16 @@ const apiURL = "https://randomuser.me/api/?results=8&nat=mx";
 const data = async function (apiURL) {
     try {
         const data = await fetch(apiURL);
+        // console.log(data)
         const response = await data.json();
-        localStorage.setItem("staff",JSON.stringify(response))
+        // console.log(response)
+        localStorage.setItem("staff",JSON.stringify(response));
     } catch (error) {
         console.log(error)
     }
 };
 
-data()
+data(apiURL);
 
 const staff = JSON.parse(localStorage.getItem("staff")).results;
 // console.log(staff)
