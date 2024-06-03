@@ -41,6 +41,9 @@ section {
     max-width: 380px;
 }
 
+.conexionAPI {
+    padding: 80px;
+}
 /* Seccion Portada */
 .portada, .login, .conexionAPI {
     min-height: 100vh;
