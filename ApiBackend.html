@@ -43,8 +43,30 @@
       </div>
   </nav>
     <main class="conexionAPI d-flex flex-column justify-content-center align-items-center">
-      <h1>STAFF</h1>
-      <div class="staff d-flex flex-wrap gap-5 justify-content-center align-items-center">
+      <h1>Agregar Pelicula</h1>
+      <form id="formAgregar" action="" method="post" enctype="multipart/form-data" class="d-flex flex-column gap-2 bg-warning py-4 px-5 my-4">
+        <div>
+          <label for="titulo">Titulo:</label>
+          <input type="text" class="form-control" name="titulo" id="titulo" required>
+        </div>
+        <div>
+          <label for="genero">Genero:</label>
+          <input type="text" class="form-control" name="genero" id="genero" required>
+        </div>
+        <div>
+          <label for="duracion">Duración:</label>
+          <input type="text" class="form-control" name="duracion" id="duracion" required>
+        </div>
+        <div>
+          <label for="imagen">URL Imagen:</label>
+          <input type="text" class="form-control" name="imagen" id="imagen" required>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+          <input type="submit" value="Agregar" class="btn btn-success">
+        </div>
+      </form>
+      <h2>PELICULAS</h2>
+      <div class="movies d-flex flex-wrap gap-5 justify-content-center align-items-center">
 
       </div>
     </main>
@@ -57,7 +79,7 @@
         </div>
       </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="conexionAPI.js"></script>
-
+    <script src="apiBackend.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

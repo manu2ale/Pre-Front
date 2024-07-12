@@ -1,28 +1,17 @@
 const apiURL = "https://randomuser.me/api/?results=8&nat=mx";
+document.addEventListener('DOMContentLoaded', async () => {
+    const response = await fetch(apiURL);
+    const data = await response.json();
+    // console.log(data.results)
 
-const data = async function (apiURL) {
-    try {
-        const data = await fetch(apiURL);
-        // console.log(data)
-        const response = await data.json();
-        // console.log(response)
-        localStorage.setItem("staff",JSON.stringify(response));
-    } catch (error) {
-        console.log(error)
-    }
-};
+    const staff = data.results;
+    
+    let principal = document.querySelector(".staff");
 
-data(apiURL);
+    let cardHTML = "";
 
-const staff = JSON.parse(localStorage.getItem("staff")).results;
-// console.log(staff)
-
-let principal = document.querySelector(".staff");
-
-let cardHTML ="";
-
-function card (person) {
-    return `
+    function card(person) {
+        return `
     <div class="card border-0 text-bg-success" style="width: 22rem;">
         <img src=${person.picture.large} class="card-img-top rounded-circle border border-4 mt-3" alt="foto de perfil" style="width: 12rem; align-self:center;">
         <div class="card-body">
@@ -35,10 +24,10 @@ function card (person) {
         </ul>
     </div>
     `
-}
+    }
 
-staff.map(person => cardHTML += card(person))
+    staff.map(person => cardHTML += card(person))
+    principal.innerHTML = cardHTML;
+    // console.log(principal)
 
-principal.innerHTML = cardHTML;
-// console.log(principal)
-
+});
